@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: bisque;
+}
+
+.left{
+    display: flex;
+    min-width: 80%;
+    margin: auto;
+}
+
+.right{
+    min-width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
