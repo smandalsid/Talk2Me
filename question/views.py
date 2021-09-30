@@ -44,3 +44,6 @@ def user_signup(request):
         except:
             error="yes"
     return render(request, 'user_signup.html',{'error':error})
+
+def user_index(request):
+    return render(request, 'user_index.html')
