@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% ifequal error "no" %}
+<script>
+    alert('Logged in successfully')
+    window.location=("{% url 'index' %}");
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('Invalid login credentials, try again!')
+</script>
+{% endifequal %}
+<form method="post" class="user-login">
+    {% csrf_token %}
+    <div class="user-login">
+        <span>User login</span>
+        <span>Username</span>
+        <input type="text" placeholder="Username" name="username">
+    </div>
+    <div class="user-login">
+        <span>Password</span>
+        <input type="password" placeholder="Password" name="password">
+    </div>
+    <button type="submit">submit</button>
+</form>
+{% endblock content %}

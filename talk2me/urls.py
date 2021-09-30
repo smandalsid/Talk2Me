@@ -21,5 +21,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index ,name='index'),
-
+    path('user_login/', user_login ,name='user_login'),
+    path('user_signup/', user_signup ,name='user_signup'),
+    path('signout/', signout ,name='signout'),
 ]

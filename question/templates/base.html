@@ -13,13 +13,14 @@
         <div class="left">
             <div class="logo">
                 <span>Talk2Me</span>
+                <a href="{% url 'index' %}">Home</a>
             </div>
         </div>
         <div class="right">
-            <button>Login</button>
-            <button>SignUp</button>
+            <a href="#"><button>admin login</button></a>
         </div>
     </nav>
+    
     {% block content %}
     {% endblock content %}
 </body>

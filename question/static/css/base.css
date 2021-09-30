@@ -9,7 +9,7 @@ nav{
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: blanchedalmond;
 }
 
 .left{
@@ -23,4 +23,25 @@ nav{
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
+}
+
+.user-login-signup{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-login-signup button{
+    padding: 5px 5px;
+    margin: 5px 0px;
+}
+
+.user-login{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

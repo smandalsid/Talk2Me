@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% ifequal error "no" %}
+<script>
+    alert('Account created successfully')
+    window.location=("{% url 'index' %}");
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong, please try again!')
+</script>
+{% endifequal %}
+<form method="post" class="user-login">
+    {% csrf_token %}
+    <span>User signup</span>
+    <div class="user-login">
+        <span>First name</span>
+        <input type="text" placeholder="First name" name="first_name">
+    </div>
+    <div class="user-login">
+        <span>Last name</span>
+        <input type="text" placeholder="Last name" name="last_name">
+    </div>
+    <div class="user-login">
+        <span>Email</span>
+        <input type="email" placeholder="Email ID" name="email">
+    </div>
+    <div class="user-login">
+        <span>Phone number(optional)</span>
+        <input type="text" placeholder="Phone number" name="phone">
+    </div>
+    <div class="user-login">
+        <span>Username</span>
+        <input type="text" placeholder="Username" name="username">
+    </div>
+    <div class="user-login">
+        <span>Password</span>
+        <input type="password" placeholder="Password" name="password">
+    </div>
+    <button type="submit">submit</button>
+</form>
+{% endblock content %}
